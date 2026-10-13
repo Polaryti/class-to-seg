@@ -1,0 +1,32 @@
+# Experiment manifest. Whitespace separated; '#' starts a comment.
+#
+# id   kind      corpus          model            weights                          args
+#   corpus  : name of the per-fold data YAML written by prepare_folds.py (<corpus>_<fold>.yaml)
+#   weights : folder of the EXISTING runs of that configuration (it contains fold*_seed*),
+#             or 'auto' for the runs trained by these scripts into <RUNS>/<id>/<fold>_seed<seed>
+#   args    : extra training arguments key=value,key=value (or '-')
+#
+# ---- EDIT the five paths below to your run folders ----------------------------------
+E1   yolo      v1              yolo11n-seg.pt   /path/to/exp-to-clean/runs/E1     -
+E2   yolo      v1              yolo11s-seg.pt   /path/to/exp-to-clean/runs/E2     -
+E3   yolo      v1              yolo11m-seg.pt   /path/to/exp-to-clean/runs/E3     -
+E4   yolo      v1              yolo11l-seg.pt   /path/to/exp-to-clean/runs/E4     -
+E5   yolo      v1              yolo11x-seg.pt   /path/to/exp-to-clean/runs/E5     -
+E6   yolo      v2              yolo11n-seg.pt   /path/to/exp-to-clean/runs/E6     -
+E7   yolo      v2              yolo11s-seg.pt   /path/to/exp-to-clean/runs/E7     -
+E8   yolo      v2              yolo11m-seg.pt   /path/to/exp-to-clean/runs/E8     -
+E9   yolo      v2              yolo11l-seg.pt   /path/to/exp-to-clean/runs/E9     -
+E10  yolo      v2              yolo11x-seg.pt   /path/to/exp-to-clean/runs/E10    -
+E11  yolo      v3              yolo11n-seg.pt   /path/to/exp-to-clean/runs/E11    -
+E12  yolo      v3              yolo11s-seg.pt   /path/to/exp-to-clean/runs/E12    -
+E13  yolo      v3              yolo11m-seg.pt   /path/to/exp-to-clean/runs/E13    -
+E14  yolo      v3              yolo11l-seg.pt   /path/to/exp-to-clean/runs/E14    -
+E15  yolo      v3              yolo11x-seg.pt   /path/to/exp-to-clean/runs/E15    -
+E16  yolo      v3              yolo11m-seg.pt   /path/to/exp-to-clean/runs/IMB_copypaste   copy_paste=0.3
+E17  yolo      v3              yolov8m-seg.pt   /path/to/exp-to-clean/runs/SOTA_yolov8m    -
+E21  yolo      v3              yolo11m-seg.pt   /path/to/exp-to-clean/runs/IMB_focal       -
+E22  yolo      v3              yolo11m-seg.pt   /path/to/exp-to-clean/runs/IMB_clsweight   -
+# ---- trained by these scripts (one run per fold) ------------------------------------
+E18  maskrcnn  v3              -                auto     -
+E19  yolo      v3_sizematched  yolo11m-seg.pt   auto     -
+E20  yolo      v3_deranged     yolo11m-seg.pt   auto     -
